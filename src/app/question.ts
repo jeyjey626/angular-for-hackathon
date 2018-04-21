@@ -1,5 +1,8 @@
 export class Question {
-  private questionBody: string;
-  private answers: string[];
+  public postId: string;
+  public id: string;
+  public name: string;
+  public email: string;
+  public body: string;
 }
 

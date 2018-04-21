@@ -10,12 +10,8 @@ import {DataService} from './data.service';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  public answers: Answer[];
-  constructor(private _dataService: DataService) {
+  constructor() {
   }
   ngOnInit() {
-        this._dataService
-      .getAll<Answer[]>()
-      .subscribe((data: Answer[]) => this.answers = data);
   }
 }
