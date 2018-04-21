@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {DataService} from './data.service';
 import {Answer} from './answer';
+import {DataService} from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +11,10 @@ import {Answer} from './answer';
 export class AppComponent implements OnInit {
   title = 'app';
   public answers: Answer[];
-  private _dataService: DataService;
+  constructor(private _dataService: DataService) {
+  }
   ngOnInit() {
-    this._dataService
+        this._dataService
       .getAll<Answer[]>()
       .subscribe((data: Answer[]) => this.answers = data);
   }

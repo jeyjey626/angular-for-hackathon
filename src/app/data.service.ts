@@ -16,7 +16,7 @@ export class DataService {
   }
 }
 
-@Injectable()
+/*@Injectable()
 export class CustomInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -28,4 +28,4 @@ export class CustomInterceptor implements HttpInterceptor {
     console.log(JSON.stringify(req.headers));
     return next.handle(req);
   }
-}
+}*/
